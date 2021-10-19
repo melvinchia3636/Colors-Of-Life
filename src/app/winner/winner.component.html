@@ -1,0 +1,36 @@
+<div>
+	<div class="header">
+		<h1>colors of life</h1>
+		<h2>美术设计比赛获奖作品</h2>
+	</div>
+	<nav>
+		<ul>
+			<li	(click)="changeGroupTab(0)" [class]="groupTab == 0 ? 'current' : ''"><a>Logo设计比赛</a></li>
+			<li	(click)="changeGroupTab(1)" [class]="groupTab == 1 ? 'current' : ''"><a>吉祥物设计比赛</a></li>
+		</ul>
+	</nav>
+	<nav>
+		<ul>
+			<li (click)="changeCategoryTab(0)" [class]="categoryTab == 0 ? 'current' : ''"><a>甲组<span>（初一、初二）</span></a></li>
+			<li (click)="changeCategoryTab(1)" [class]="categoryTab == 1 ? 'current' : ''"><a>乙组<span>（初三、高一）</span></a></li>
+			<li (click)="changeCategoryTab(2)" [class]="categoryTab == 2 ? 'current' : ''"><a>丙组<span>（高二，高三）</span></a></li>
+		</ul>
+	</nav>
+	<div class=content>
+		<div *ngFor="let d of data; let index = index" class="card">
+			<div class='img'><img [src]="'../../assets/winner/'+d.id+'.jpg'"/></div>
+			<div>
+				<div>
+					<h3>{{ d.prize }}</h3>
+					<h2>{{ d.stud_name }}</h2>
+					<p>{{ d.class }}</p>
+				</div>
+				<div>
+					<h4 *ngIf="d.stud_no" style="margin-top: 2rem">学号：{{ d.stud_no }}</h4>
+					<h4 *ngIf="d.creative_mind" style="margin-top: 1rem">创作心路：{{ d.creative_mind }}</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<p>版权所有，翻印必究</p>

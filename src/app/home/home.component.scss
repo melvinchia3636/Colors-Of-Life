@@ -1,0 +1,96 @@
+div:first-child {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+
+	& h1 {
+		font-size: 7rem;
+		font-family: "Gotham", sans-serif;
+		text-transform: uppercase;
+		color: var(--main-color);
+		letter-spacing: 0.2em;
+		text-align: center;
+		font-weight: 500;
+	}
+
+	& h2 {
+		font-size: 2rem;
+		font-family: "Noto Sans SC", sans-serif;
+		text-transform: uppercase;
+		color: var(--main-color);
+		letter-spacing: 0.16em;
+		text-align: center;
+		font-weight: 700;
+	}
+
+	& h3 {
+		font-size: 1.6rem;
+		font-family: "Noto Sans SC", sans-serif;
+		text-transform: uppercase;
+		color: var(--main-color);
+		letter-spacing: 0.3em;
+		text-align: center;
+		font-weight: 700;
+	}
+
+	& a {
+		background-color: var(--second-color);
+		color: white;
+		font-size: 1.6rem;
+		font-family: "Noto Sans SC", sans-serif;
+		letter-spacing: 0.2em;
+		padding: 1.4rem 2rem;
+		margin-top: 1.6rem;
+		border-radius: 8px;
+		box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+		display: flex;
+		align-items: center;
+		gap: 3rem;
+		transition: .5s;
+		cursor: pointer;
+
+		&:hover {
+			gap: 2rem;
+			padding: 1.4rem 3rem;
+		}
+	}
+}
+
+p {
+	font-size: .8rem;
+	font-family: "Noto Sans SC", sans-serif;
+	text-transform: uppercase;
+	color: var(--main-color);
+	letter-spacing: 0.3em;
+	text-align: center;
+	font-weight: 700;
+	padding-bottom: 1rem;
+}
+
+.decor {
+	background: var(--second-color);
+	opacity: .2;
+	z-index: -9999;
+	width: 1000px;
+	height: 330px;
+	border-radius: 430px;
+	position: absolute;
+	
+	&-1 {
+		left: -10%;
+		top: -50%;
+		transform: rotate(45deg);
+		transform-origin: top left;
+	}
+
+	&-2 {
+		right: -10%;
+		bottom: -50%;
+		transform: rotate(45deg);
+		transform-origin: bottom right;
+	}
+}

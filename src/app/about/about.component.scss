@@ -1,0 +1,217 @@
+div:first-of-type {
+	height: 100%;
+	width: 100%;
+	position: relative;
+
+	& > div {
+		background-color: rgba(255, 255, 255, .8);
+		width: 100%;
+		position: relative;
+
+		&:not(:first-child) {
+			padding: 2rem 0;
+			z-index: -1;
+		}
+
+		.logo {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			gap: 6rem;
+			margin: 6rem 0;
+			
+			& > img {
+				height: 300px;
+			}
+
+			& div {
+				width: auto;
+				padding: 0;
+				margin-top: -.4rem;
+				background-color: transparent;
+
+				& h3 {
+					text-align: left;
+					display: flex;
+					margin: 0
+				}
+
+				& p {
+					padding: 0;
+					margin: 0;
+					margin-bottom: 1rem;
+					text-align: left;
+				}
+			}
+		}
+
+		& h2 {
+			font-size: 2rem;
+			font-family: "Noto Sans SC", sans-serif;
+			text-transform: uppercase;
+			color: var(--main-color);
+			letter-spacing: 0.16em;
+			text-align: center;
+			font-weight: 800;
+			position: relative;
+
+			&::after {
+				content: "";
+				background: var(--second-color);
+				width: 4%;
+				height: 5px;
+				position: absolute;
+				bottom: -16px;
+				left: calc(50% - 1px);
+				transform: translateX(-50%);
+				border-radius: 4px;
+				transition: .5s;
+			}
+		}
+
+		h3 {
+			font-size: 1.6rem;
+			font-family: "Noto Sans SC", sans-serif;
+			text-transform: uppercase;
+			color: var(--main-color);
+			letter-spacing: 0.16em;
+			text-align: center;
+			font-weight: 800;
+			position: relative;
+			margin-bottom: 4rem;
+			margin-top: -1rem
+		}
+
+		p {
+			margin-top: 4rem;
+			padding: 0 4rem;
+			font-size: 1.2rem;
+			font-family: "Noto Sans SC", sans-serif;
+			text-transform: uppercase;
+			color: var(--main-color);
+			letter-spacing: 0.16em;
+			font-weight: 400;
+			position: relative;
+		}
+
+		& a:last-of-type {
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: calc(100% - 12rem);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 1.4rem;
+			
+			& > svg {
+				flex-shrink: 0;
+			}
+
+			& > div {
+				background: #DDDDDD;
+				width: 100%;
+				flex-shrink: 9999;
+				height: 2px;
+				border-radius: 4px;
+			}
+		}
+
+		&:first-child {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 2rem;
+			height: 100%;
+		
+			& h1 {
+				font-size: 5rem;
+				text-transform: uppercase;
+				letter-spacing: 0.16em;
+				text-align: center;
+				font-weight: 400;
+				position: relative;
+				z-index: 2;
+		
+				& span {
+					&:last-child {
+						font-family: "Gotham", sans-serif;
+						color: var(--main-color);
+					}
+		
+					&:first-child {
+						font-family: "Noto Sans SC", sans-serif;
+						color: var(--second-color);
+					}
+				}
+			}
+		
+			p {
+				font-size: 2rem;
+				font-family: "Noto Sans SC", sans-serif;
+				text-transform: uppercase;
+				color: var(--main-color);
+				letter-spacing: 0.2em;
+				font-weight: 600;
+				position: absolute;
+		
+				&:first-of-type {
+					top: 10%;
+					left: 6%;
+		
+					& svg {
+						margin-right: -2.4rem;
+					}
+				}
+		
+				&:last-of-type {
+					bottom: 20%;
+					right: 6%;
+					z-index: 1;
+		
+					& svg {
+						margin-left: -3.8rem;
+						position: relative;
+						z-index: -1
+					}
+				}
+			}
+	
+			& .decor {
+				background: var(--second-color);
+				opacity: .2 !important;
+				z-index: 0 !important;
+				width: 1000px !important;
+				height: 330px !important;
+				border-radius: 430px !important;
+				position: absolute !important;
+				
+				&-1 {
+					right: -10%;
+					top: -50%;
+					transform: rotate(-45deg);
+					transform-origin: top right;
+				}
+			
+				&-2 {
+					left: -10%;
+					bottom: -50%;
+					transform: rotate(-45deg);
+					transform-origin: bottom left;
+				}
+			}
+		}
+	} 
+
+	p:last-child {
+		font-size: .8rem;
+		font-family: "Noto Sans SC", sans-serif;
+		color: var(--main-color);
+		letter-spacing: 0.3em;
+		text-align: center;
+		font-weight: 700;
+		padding: 1rem 0;
+	}
+}

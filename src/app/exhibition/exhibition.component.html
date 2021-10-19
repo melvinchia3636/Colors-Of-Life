@@ -1,0 +1,33 @@
+<div>
+	<nav>
+		<ul>
+			<li (click)="changeTab(0)" [class]="tab == 0 ? 'current' : ''"><a>十二生肖</a></li>
+			<li (click)="changeTab(1)" [class]="tab == 1 ? 'current' : ''"><a>理想的生活</a></li>
+			<li (click)="changeTab(2)" [class]="tab == 2 ? 'current' : ''"><a>Colors Of Life</a></li>
+			<li (click)="changeTab(3)" [class]="tab == 3 ? 'current' : ''"><a>静物</a></li>
+			<li (click)="changeTab(4)" [class]="tab == 4 ? 'current' : ''"><a>自由创作</a></li>
+		</ul>
+	</nav>
+	<div class=content>
+		<div *ngFor="let d of data; let index = index" class="card">
+			<div class='img'><img [src]="'../../assets/exhibition/'+d.id+'.jpg'"/></div>
+			<div>
+				<div>
+					<p>#{{ d.id }}</p>
+					<h2>《{{ d.name || "佚名" }}》</h2>
+				</div>
+				<div>
+					<h3>{{ d.stud_name }}</h3>
+					<h4>班级：{{ d.class || "-" }}</h4>
+					<h4>学号：{{ d.stud_no || "-" }}</h4>
+					<h4>组别：{{ d.group || "-" }}</h4>
+					<h4>媒介：{{ d.medium || "-" }}</h4>
+					<h4 *ngIf="d.description" style="margin-top: 1rem">作品简介：{{ d.description }}</h4>
+					<h4 *ngIf="d.thought" style="margin-top: 1rem">感想：{{ d.thought }}</h4>
+					<h4 *ngIf="d.creative_mind" style="margin-top: 1rem">创作心路：{{ d.creative_mind }}</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<p>版权所有，翻印必究</p>
